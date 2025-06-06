@@ -34,7 +34,6 @@
       </article>
       <article class="gallery">
         <div class="gallery__content">
-          <div class="item"><img src="/gallery/1.jpg" alt="alt"></div>
           <div class="item"><img src="/gallery/2.jpg" alt="alt"></div>
           <div class="item"><img src="/gallery/3.jpg" alt="alt"></div>
           <div class="item"><img src="/gallery/4.jpg" alt="alt"></div>
