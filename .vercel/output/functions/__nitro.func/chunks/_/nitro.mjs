@@ -2,7 +2,6 @@ import process from 'node:process';globalThis._importMeta_=globalThis._importMet
 import https from 'node:https';
 import { EventEmitter } from 'node:events';
 import { Buffer as Buffer$1 } from 'node:buffer';
-import { getIcons } from '@iconify/utils';
 import { createHash } from 'node:crypto';
 import { consola } from 'consola';
 import { fileURLToPath } from 'node:url';

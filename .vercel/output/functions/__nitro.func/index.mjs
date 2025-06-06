@@ -3,7 +3,6 @@ import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import '@iconify/utils';
 import 'node:crypto';
 import 'consola';
 import 'node:url';

@@ -1,6 +1,5 @@
 import { defineComponent, computed, h, onServerPrefetch, toValue, getCurrentInstance, ref, shallowRef, toRef, nextTick, unref, createElementBlock, provide, cloneVNode } from 'vue';
 import { Icon, getIcon, loadIcon as loadIcon$1 } from '@iconify/vue';
-import { getIconCSS } from '@iconify/utils/lib/css/icon';
 import { a as useNuxtApp, d as useAppConfig, b as useRuntimeConfig, e as asyncDataDefaults, f as createError } from './server.mjs';
 import { u as useHead } from './v3-DFOCet-m.mjs';
 import '../_/nitro.mjs';
@@ -8,7 +7,6 @@ import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import '@iconify/utils';
 import 'node:crypto';
 import 'consola';
 import 'node:url';
