@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.ts",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": ["public/gallery/**"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/gallery/.*",
+      "dest": "/public/gallery"
+    }
+  ]
+}
