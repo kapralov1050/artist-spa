@@ -32,7 +32,7 @@
         </div>
         <div class="copyright">© Kalashyulya 2025</div>
       </article>
-      <article class="gallery">
+      <!-- <article class="gallery">
         <div class="gallery__content">
           <div class="item"><img src="/gallery/2.jpg" alt="alt"></div>
           <div class="item"><img src="/gallery/3.jpg" alt="alt"></div>
@@ -49,7 +49,7 @@
           <div class="item"><img src="/gallery/14.jpg" alt="alt"></div>
           <div class="item"><img src="/gallery/15.jpg" alt="alt"></div>
         </div>
-      </article>
+      </article> -->
     </div>
   </div>
 </template>
