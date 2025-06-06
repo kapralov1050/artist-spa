@@ -5,7 +5,6 @@ import 'node:events';
 import 'node:buffer';
 import 'node:crypto';
 import 'node:url';
-import 'ipx';
 import 'node:fs';
 import 'node:path';
 
