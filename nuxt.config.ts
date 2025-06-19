@@ -4,4 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/image'],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
 })
