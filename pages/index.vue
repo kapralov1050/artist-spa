@@ -1,23 +1,32 @@
 <template>
-  <PreloaderSpinner v-if="isLoading"/>
+  <PreloaderSpinner v-if="isLoading" />
   <div v-else>
     <div id="wrapper">
       <div id="content">
         <Header />
         <article class="main-article">
-          <Navigation />
+          <Navigation class="navigation" />
           <div class="main-article__content">
-            <h2 class="main-article__header"> Обо мне</h2>
+            <h2 class="main-article__header">Обо мне</h2>
             <div class="main-article__paragraph">
-                Художник-акварелист.
-                Основная техника - акварель, жанр - пейзаж, сюжет - сельские и городские мотивы с архитектурой.
-                Мне нравится рисовать на пленэре, делать наброски и быстрые этюды. <br/> <br/>
+              Художник-акварелист. Основная техника - акварель, жанр - пейзаж,
+              сюжет - сельские и городские мотивы с архитектурой. Мне нравится
+              рисовать на пленэре, делать наброски и быстрые этюды. <br />
+              <br />
 
-                Я работала в палехских мастерских «Духанин» и «Возрождение», в багетной мастерской, на росписях(сусальное золото), преподавала в художественной мастерской и также занималась росписью по дереву. <br/>
+              Я работала в палехских мастерских «Духанин» и «Возрождение», в
+              багетной мастерской, на росписях(сусальное золото), преподавала в
+              художественной мастерской и также занималась росписью по дереву.
+              <br />
 
-                Участвую в рисовальных марафонах, конкурсах. Посещала Вечерние Рисовальные Классы при Академии художеств, мастер-классы акварелистов. <br/> <br/>
+              Участвую в рисовальных марафонах, конкурсах. Посещала Вечерние
+              Рисовальные Классы при Академии художеств, мастер-классы
+              акварелистов. <br />
+              <br />
 
-                В данный момент проживаю в Санкт-Петербурге, занимаюсь акварельной живописью, графикой, веду блог, пишу на заказ, провожу мастер-классы и преподаю в школе «Художник онлайн».
+              В данный момент проживаю в Санкт-Петербурге, занимаюсь акварельной
+              живописью, графикой, веду блог, пишу на заказ, провожу
+              мастер-классы и преподаю в школе «Художник онлайн».
             </div>
           </div>
           <div class="copyright">© Kalashyulya 2025</div>
@@ -45,7 +54,6 @@
   </div>
 </template>
 
-
 <script setup>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,43 +61,42 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 definePageMeta({
   layout: false,
-})
+});
 
-const { isLoading, startLoader } = usePageLoader()
+const { isLoading, startLoader } = usePageLoader();
 
 const handleScroll = () => {
-  document.body.style.cssText += `--scrollTop: ${window.scrollY}px`
-}
+  document.body.style.cssText += `--scrollTop: ${window.scrollY}px`;
+};
 
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  startLoader()
+  startLoader();
 
-  window.addEventListener('scroll', handleScroll)
+  window.addEventListener("scroll", handleScroll);
 
   ScrollSmoother.create({
-    wrapper: '#wrapper',
-    content: '#content',
-  })
-})
+    wrapper: "#wrapper",
+    content: "#content",
+  });
+});
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  document.body.style.cssText = '--scrollTop: 0px'
-})
+  window.removeEventListener("scroll", handleScroll);
+  document.body.style.cssText = "--scrollTop: 0px";
+});
 </script>
 
-
 <style>
-@import '@/styles/main.css';
+@import "@/styles/main.css";
 
 .main-header {
   position: relative;
 }
 
 .main-header::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 10000;
   width: 100%;
@@ -114,7 +121,7 @@ onUnmounted(() => {
 .layer {
   height: 100%;
   width: 100%;
-  position:absolute;
+  position: absolute;
   background-size: cover;
   background-position: center;
   transition: var(--transition);
@@ -129,7 +136,7 @@ onUnmounted(() => {
   transition: var(--transition);
   will-change: transform;
   font-weight: 900;
-  color:#37778f;
+  color: #37778f;
   text-shadow: 0 0 12px #d8e5e9;
 }
 
@@ -171,6 +178,11 @@ onUnmounted(() => {
   align-items: center;
   position: relative;
   text-align: center;
+  will-change: transform;
+}
+
+.navigation {
+  transform: translate3d(0, calc(var(--scrollTop) / 18), 0);
   will-change: transform;
 }
 

@@ -1,41 +1,31 @@
 <template>
   <article class="container">
-    <button class="burger-button" @click="toggleMobileMenu">
-      ☰
-    </button>
-    <ul class="navgroup" :class="{ 'active': isMobileMenuOpen}">
+    <button class="burger-button" @click="toggleMobileMenu">☰</button>
+    <ul class="navgroup" :class="{ active: isMobileMenuOpen }">
       <li class="navgroup__item">
-        <NuxtLink to="/" class="navgroup__link">
-          Домашняя страница
-        </NuxtLink>
+        <NuxtLink to="/" class="navgroup__link"> Домашняя страница </NuxtLink>
       </li>
       <li class="navgroup__item">
-        <NuxtLink to="/artStore" class="navgroup__link">
-          Магазин
-        </NuxtLink>
+        <NuxtLink to="/artStore" class="navgroup__link"> Магазин </NuxtLink>
       </li>
       <li class="navgroup__item">
-        <NuxtLink to="/about" class="navgroup__link">
-          Обо мне
-        </NuxtLink>
+        <NuxtLink to="/about" class="navgroup__link"> Обо мне </NuxtLink>
       </li>
     </ul>
   </article>
 </template>
 
-
-<script setup lang='ts'>
-const isMobileMenuOpen = ref(false)
+<script setup lang="ts">
+const isMobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 </script>
-
 
 <style scoped>
 .container {
-  padding: 3rem 2rem;
+  padding: 0 2rem;
   position: absolute;
   top: 0;
   z-index: 3;
@@ -61,14 +51,14 @@ const toggleMobileMenu = () => {
 
 .navgroup__link::before {
   position: relative;
-  content: '▸';
+  content: "▸";
   color: var(--logo-color);
   opacity: 0;
   transition: all 300ms ease;
 }
 
-.navgroup__link:hover::before  {
-  content: '▸';
+.navgroup__link:hover::before {
+  content: "▸";
   color: var(--logo-color);
   opacity: 1;
 }

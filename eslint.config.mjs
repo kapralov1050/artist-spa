@@ -14,7 +14,7 @@ export default withNuxt({
     '@typescript-eslint/no-unused-vars': ['error'],
     
     // Nuxt-specific
-    'nuxt/no-env-in-hooks': 'error',
-    'nuxt/no-this-in-fetch-data': 'error'
+    'nuxt/no-env-in-hooks': 'off',
+    'nuxt/no-this-in-fetch-data': 'off'
   }
 })
